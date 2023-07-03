@@ -14,7 +14,7 @@ pipeline {
            steps {
               script {
          
-                  sh "terraform init --reconfigure"
+                  sh "terraform init"
                   sh "terraform plan"
                   sh " terraform apply --auto-approve"
             }
