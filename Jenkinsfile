@@ -14,8 +14,7 @@ pipeline {
            steps {
               script {
          
-                  sh "terraform init"
-                  terraform state replace-provider registry.terraform.io/-/aws registry.terraform.io/hashicorp/aws --auto-approve
+                  sh "terraform init --reconfigure"
                   sh "terraform plan"
                   sh " terraform apply --auto-approve"
             }
