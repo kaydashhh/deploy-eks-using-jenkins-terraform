@@ -13,8 +13,9 @@ pipeline {
            }
            steps {
               script {
-//                  sh "terraform destroy --auto-approve"
+         
                   sh "terraform init"
+                  terraform state replace-provider registry.terraform.io/-/aws registry.terraform.io/hashicorp/aws --auto-approve
                   sh "terraform plan"
                   sh " terraform apply --auto-approve"
             }
