@@ -19,10 +19,5 @@ pipeline {
             }
         }
         
-        stage('Cleanup') {
-            steps {
-            //    sh 'terraform destroy -auto-approve'
-            }
-        }
     }
 }
