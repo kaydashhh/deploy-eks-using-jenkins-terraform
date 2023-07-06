@@ -14,8 +14,8 @@ pipeline {
            steps {
               script {
          
-                  sh "terraform init -upgrade"
-                  sh "terraform plan"
+                //  sh "terraform init -upgrade"
+                //  sh "terraform plan"
                   sh " terraform apply --auto-approve"
             }
         }
